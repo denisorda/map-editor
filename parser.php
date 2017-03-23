@@ -5,6 +5,7 @@ $world = $_POST['world'];
 $level = $_POST['level'];
 $mapPath = './files/' . $_POST['name'];
 $sources = [];
+$sourcesSizes = [];
 switch ($world) {
     case 1:
         $sources = [
@@ -17,6 +18,17 @@ switch ($world) {
             's7' => 'sprites/Enemy - World 1 - thumper.png',
             's8' => 'sprites/Items - World 1.png',
             's9' => 'sprites/Misc - nodes.png'
+        ];
+        $sourcesSizes = [
+            's1' => [16, 16],
+            's2' => [16, 16],
+            's3' => [32, 32],
+            's4' => [32, 32],
+            's5' => [32, 32],
+            's6' => [32, 32],
+            's7' => [16, 16],
+            's8' => [16, 16],
+            's9' => [16, 48]
         ];
         break;
     case 2:
@@ -35,6 +47,21 @@ switch ($world) {
             's12' => 'sprites/Items - World 2.png',
             's13' => 'sprites/Misc - nodes.png'
         ];
+        $sourcesSizes = [
+            's1' => [16, 16],
+            's2' => [32, 32],
+            's3' => [16, 32],
+            's4' => [32, 32],
+            's5' => [32, 32],
+            's6' => [16, 16],
+            's7' => [32, 32],
+            's8' => [32, 32],
+            's9' => [32, 32],
+            's10' => [16, 16],
+            's11' => [16, 16],
+            's12' => [16, 16],
+            's13' => [16, 48]
+        ];
         break;
     case 3:
         $sources = [
@@ -49,6 +76,19 @@ switch ($world) {
             's9' => 'sprites/Enemy - World 3 - stonewat.png',
             's10' => 'sprites/Items - World 3.png',
             's11' => 'sprites/Misc - nodes.png'
+        ];
+        $sourcesSizes = [
+            's1' => [16, 16],
+            's2' => [32, 32],
+            's3' => [32, 32],
+            's4' => [32, 32],
+            's5' => [32, 32],
+            's6' => [32, 32],
+            's7' => [16, 16],
+            's8' => [16, 16],
+            's9' => [32, 32],
+            's10' => [16, 16],
+            's11' => [16, 48]
         ];
         break;
     case 4:
@@ -70,6 +110,24 @@ switch ($world) {
             's15' => 'sprites/Items - World 4.png',
             's16' => 'sprites/Misc - nodes.png'
         ];
+        $sourcesSizes = [
+            's1' => [16, 16],
+            's2' => [16, 16],
+            's3' => [16, 16],
+            's4' => [16, 16],
+            's5' => [32, 48],
+            's6' => [16, 16],
+            's7' => [32, 32],
+            's8' => [32, 32],
+            's9' => [32, 32],
+            's10' => [16, 16],
+            's11' => [16, 16],
+            's12' => [16, 16],
+            's13' => [32, 32],
+            's14' => [32, 32],
+            's15' => [16, 16],
+            's16' => [16, 48]
+        ];
         break;
 }
 
@@ -84,4 +142,5 @@ echo json_encode([
     ],
     'sources' => $sources,
     'map' => Helper::compare($map, $sprites),
+    'sourcesSizes' => $sourcesSizes
 ]);

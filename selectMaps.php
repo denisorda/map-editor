@@ -8,3 +8,19 @@ while ($level = $levels->fetch_assoc()) {
 }
 header('Content-Type: application/json');
 echo json_encode($levelsArr);
+
+
+
+
+
+
+
+
+//$stmt = $pdo->prepare('SELECT id, name FROM levels WHERE is_deleted=0');
+//$levels = $stmt->execute();
+//$levelsArr = [];
+//while ($level = $levels->fetch_assoc()) {
+//    $levelsArr[] = $level;
+//}
+//header('Content-Type: application/json');
+//echo json_encode($levelsArr);

@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/style.css">
     <script src="public/script.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+<!--    <script src="public/jquery-3.1.1.min.js"></script>-->
     <!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
@@ -21,10 +25,10 @@
     </div>
     <div class="uploader" style="display: none;">
         <div><a href="/"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a></div>
-    <span class="btn btn-success fileinput-button">
+        <span class="btn btn-success fileinput-button">
         <i class="fa fa-plus" aria-hidden="true"> </i>
         <span> Upload level image</span>
-        <!-- The file input field used as target for the file upload widget -->
+            <!-- The file input field used as target for the file upload widget -->
         <form id="fileupload" enctype="multipart/form-data">
             <input type="hidden" name="uploading" value="start">
             <input id="fileupload" type="file" name="files[]">
@@ -50,10 +54,11 @@
             <button type="button" class="btn btn-lg btn-primary" onClick="parse()">Parse</button>
         </div>
     </div>
-    <div>
+    <div class="level-sprite-container" style="display: none;">
         <h2 class="map-title"></h2>
-        <div class="level-sprite">
-
+        <div class="level-sprite col-md-6">
+        </div>
+        <div class="sprites col-md-6">
         </div>
     </div>
 
@@ -61,7 +66,7 @@
         <div>
             <a href="/"><i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
         </div>
-        <div class="open-map text-center">
+        <div class="open-map row">
         </div>
     </div>
 </div>
@@ -82,10 +87,10 @@
     <div class="text-center">
         <button type="button" class="btn btn-primary" onClick="saveLevel()">Save Map</button>
         <button type="button" class="btn btn-success" onClick="downloadLevel()">Export Map</button>
+        <input type="hidden" name="levelId">
     </div>
 </script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
 <script src="public/jQuery-File-Upload-9.17.0/js/vendor/jquery.ui.widget.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
@@ -135,7 +140,6 @@
             );
         }).on('fileuploaddone', function (e, data) {
             $.each(data.result.files, function (index, file) {
-                console.log(index, file);
                 localStorage.setItem('file', file.name);
             });
         }).on('fileuploadfail', function (e, data) {

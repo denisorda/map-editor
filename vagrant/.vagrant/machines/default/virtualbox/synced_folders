@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/forcom-test":{"guestpath":"/home/vagrant/forcom-test","hostpath":"D:/projects/forcom-test","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/projects/forcom-test/vagrant","disabled":false,"__vagrantfile":true}}}
