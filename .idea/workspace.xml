@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3cacdb2-cc32-498e-bca6-bdfaa7a8d91c" name="Default" comment="" />
+    <list default="true" id="a3cacdb2-cc32-498e-bca6-bdfaa7a8d91c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_2 (1).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_4 (1).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/3_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/3_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/4_4.png" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/public/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding>
                 <marker date="1489050290555" expanded="true" signature="1087:1240" ph="..." />
                 <marker date="1489050290555" expanded="true" signature="2385:2444" ph="..." />
@@ -53,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1936">
-              <caret line="88" column="90" lean-forward="true" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
+              <caret line="88" column="90" lean-forward="false" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -169,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,6 +216,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -374,16 +393,17 @@
       <workItem from="1489414515525" duration="845000" />
       <workItem from="1489921295178" duration="886000" />
       <workItem from="1489941961155" duration="153000" />
+      <workItem from="1490347524480" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176996000" />
+    <option name="totallyTimeSpent" value="177011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25886145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26262084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -795,7 +815,7 @@
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1936">
-          <caret line="88" column="90" lean-forward="true" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
+          <caret line="88" column="90" lean-forward="false" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -803,7 +823,7 @@
     <entry file="file://$PROJECT_DIR$/public/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
             <marker date="1489050290555" expanded="true" signature="1087:1240" ph="..." />
             <marker date="1489050290555" expanded="true" signature="2385:2444" ph="..." />
