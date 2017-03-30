@@ -87,3 +87,7 @@ a:hover{
     overflow: scroll;
 }
 
+.undo-redo-container{
+    margin-bottom: 10px;
+}
+

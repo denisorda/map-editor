@@ -12,7 +12,7 @@
             src="https://code.jquery.com/jquery-2.2.4.js"
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
-<!--    <script src="public/jquery-3.1.1.min.js"></script>-->
+    <!--    <script src="public/jquery-3.1.1.min.js"></script>-->
     <!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
@@ -55,7 +55,15 @@
         </div>
     </div>
     <div class="level-sprite-container" style="display: none;">
-        <h2 class="map-title"></h2>
+        <div>
+            <h2 class="map-title"></h2>
+            <div class="text-center btn-group undo-redo-container">
+                <button class="btn btn-success btn-undo" onClick="undo()">
+                    <i class="fa fa-undo" aria-hidden="true"></i> Undo</button>
+                <button class="btn btn-success btn-redo" onClick="redo()">
+                    <i class="fa fa-repeat" aria-hidden="true"></i> Redo</button>
+            </div>
+        </div>
         <div class="level-sprite col-md-6">
         </div>
         <div class="sprites col-md-6">

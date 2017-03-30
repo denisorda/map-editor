@@ -1,4 +1,6 @@
 var mapLevelItem = '', mapSpriteItem = '';
+var store = [];
+var index = 0;
 
 function upload() {
     $('.dashboard').css('display', 'none');
@@ -17,14 +19,13 @@ function parse() {
         }).done(function (res) {
         localStorage.setItem('level', JSON.stringify(res));
         $('.uploader').html($('#template-btnAfterParse').html());
-        build();
+        build(JSON.parse(localStorage.getItem('level')));
         getSprites(res.sources);
     });
 }
 
 function build(level) {
     var s = '<table><tr class="row">';
-    level = level || JSON.parse(localStorage.getItem('level'));
     level.map.forEach(function (obj, i) {
         var cntWidth = (level.info.width - 1) / 17;
         if (i % cntWidth == 0 && i > 0) {
@@ -54,7 +55,6 @@ function buildSprite(spritePath, key) {
         var level = JSON.parse(localStorage.getItem('level'));
         var widthSpriteItem = level.sourcesSizes[key][0];
         var heightSpriteItem = level.sourcesSizes[key][1];
-        console.log(level.sourcesSizes[key]);
         var y = 0;
         for (var i = 0; i < (spriteHeight - 1) / (heightSpriteItem + 1); i++) {
             var x = 0;
@@ -104,9 +104,11 @@ function openLevel(id) {
             id: id
         }).done(function (res) {
         localStorage.setItem('level', res.level);
-        var level = JSON.parse(res.level);
+        store[index] = res.level;
+        var level = JSON.parse(store[index])
         $('.uploader').css('display', 'block').html($('#template-btnAfterParse').html());
-        build();
+        build(level);
+        checkBtn();
         getSprites(level.sources);
         $('input[name="levelId"]').val(id);
     });
@@ -115,7 +117,7 @@ function openLevel(id) {
 function downloadLevel() {
     var level = localStorage.getItem('level');
     var levelObj = JSON.parse(level);
-    download(level, 'level_' + levelObj.info.world + '_' + levelObj.info.level + '.json', 'txt')
+    download(level, 'level_' + levelObj.info.world + '_' + levelObj.info.level + '.json', 'txt');
 }
 
 // Function to download data to a file
@@ -168,16 +170,53 @@ function getSpriteItem(link) {
 }
 
 function edit() {
-    console.log(mapLevelItem);
     if ((mapLevelItem || mapLevelItem === 0) && mapSpriteItem) {
-        var level = JSON.parse(localStorage.getItem('level'));
-        console.log(level.map[mapLevelItem]);
+        var level = JSON.parse(store[index]);
         level.map[mapLevelItem] = mapSpriteItem;
-        localStorage.setItem('level', JSON.stringify(level));
         mapSpriteItem = '';
-        build(level);
+        index++;
+        if (index !== store.length) {
+            store.splice(index, store.length - index, JSON.stringify(level));
+        } else {
+            store[index] = JSON.stringify(level);
+        }
+        build(JSON.parse(store[index]));
+        checkBtn();
         $('.map-img a[data-item="' + mapLevelItem + '"]').parent().addClass('img-get');
+        localStorage.setItem('level', JSON.stringify(level));
     } else {
         return true;
+    }
+}
+
+function undo() {
+    if (index > 0) {
+        index = index - 1;
+        build(JSON.parse(store[index]));
+        checkBtn();
+    }
+}
+
+function redo() {
+    if (index <= store.length - 1) {
+        index = index + 1;
+        build(JSON.parse(store[index]));
+        checkBtn();
+    }
+}
+
+function checkBtn() {
+    var $btnUndo = $('button.btn-undo');
+    var $btnRedo = $('button.btn-redo');
+    console.log(index, store);
+    if (index === 0) {
+        $btnUndo.attr('disabled', true);
+    } else {
+        $btnUndo.attr('disabled', false);
+    }
+    if (index === store.length - 1) {
+        $btnRedo.attr('disabled', true);
+    } else {
+        $btnRedo.attr('disabled', false);
     }
 }
